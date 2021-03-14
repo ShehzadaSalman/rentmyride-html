@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Meta Tags -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="RentMYRIDE">
+		<meta name="keywords" content="">
+		<meta name="author" content="Unicoder">
+
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.png">
+
+		<!--	Fonts
+			========================================================-->
+		<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<!--	Css Link
+			========================================================-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+		<link rel="stylesheet" href="css/jquery.range.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!--	Title
+			=========================================================-->
+		<title>RentMYRIDE</title>
+
+	</head>
+	<body>
+
+			<!-- Top Bar -->
+			<div class="topBar">
+				<ul>
+					<li><a href="#"><i class="fa fa-phone"></i> +971 5555 05281 </a></li>
+					<li><a href="#"><i class="fa fa-envelope"></i> info@myride.ae</a></li>
+					<li><i class="fa fa-coins"></i><select><option>AED</option></select></li>
+					<li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
+				</ul>
+				<a href="#" class="plus"><i class="fa fa-plus"></i></a>
+			</div>
+			<!-- Top Bar -->
+
+
+			<!-- Header -->
+			<div class="header">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 logo">
+						<a href="index.html"><img src="images/logo.png"></a>
+						<a href="#" class="openNav"><i class="fa fa-bars"></i></a>
+					</div>
+					<div class="col-sm-9 col-md-9">
+						<nav>
+						<a href="#" class="closeNav"><i class="fa fa-times"></i></a>
+							<ul>
+								<li><a href="index.html">Home</a></li>          
+								<li><a href="car_rental.html">Car rental </a></li>         
+								<li><a href="car_with_driver.html" class="active">Car with driver </a></li>         
+								<li><a href="stretch_limo.html">Stretch Limo </a></li>        
+								<li><a href="blog.html">Blog </a></li>     
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- Header -->
+
+
+			<!-- Banner -->
+			<div class="innerBanner">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<h3>Car With Driver</h3>
+							<img src="images/border.png">
+							<ul>
+								<li><a href="#"><i class="fa fa-home"></i> Rent Myride</a></li>
+								<li><i class="fa fa-angle-right"></i></li>
+								<li>Car With Driver</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Banner -->
+
+
+			<!-- MainTemplate -->
+			<div class="mainContent">
+				<div class="container">
+					<div class="row">
+						<div  class="col-sm-3 col-md-3">
+							<div class="sideBar">
+								<div class="sideWidget">
+									<h3><span><img src="images/caricon.png"><i></i></span>Search Filters</h3>
+									<div class="widgetContent">
+										<form>
+											<div class="searchtype">
+												<label>
+													<input type="radio" name="type">
+													<span><i class="fa fa-check"></i>Hourly</span>
+												</label>
+												<label>
+													<input type="radio" name="type">
+													<span><i class="fa fa-check"></i>Daily</span>
+												</label>
+												<label>
+													<input type="radio" name="type">
+													<span><i class="fa fa-check"></i>Delivery</span>
+												</label>
+											</div>
+											<h5><span>-</span>From Date</h5>
+											<div class="fields">
+												<i class="fa fa-calendar"></i>
+												<input class="datepicker" type="text" name="" placeholder="From Date">
+											</div>
+											<h5><span>-</span>To Date</h5>
+											<div class="fields">
+												<i class="fa fa-calendar"></i>
+												<input type="text" class="datepicker" name="" placeholder="To Date">
+											</div>
+											<h5><span>-</span>Time</h5>
+											<div class="fieldset">
+												<div class="fields">
+													<input type="text"  class="timepicker" name="" placeholder="From">
+												</div>
+												<div class="fields">
+													<input type="text"  class="timepicker" name="" placeholder="To">
+												</div>
+											</div>
+											<h4>Filter by Price</h4>
+											<input type="hidden" class="slider-input" value="23" />
+											<button>Apply filters</button>
+										</form>
+									</div>
+								</div>
+
+								<div class="sideWidget">
+									<h3><span><img src="images/caricon.png"><i></i></span>Brands</h3>
+									<div class="widgetContent">
+										<div class="brands">
+											<figure>
+									   			<a href="#"><img src="images/brand.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand2.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand3.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand4.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand5.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand6.png" /></a>
+									   		</figure>
+
+									   		<figure>
+									   			<a href="#"><img src="images/brand7.png" /></a>
+									   		</figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div  class="col-sm-9 col-md-9">
+							<div class="sortOption">
+								<div class="form">
+									<select>
+										<option>Newest First</option>
+									</select>
+									<select>
+										<option>Select Pricing</option>
+									</select>
+								</div>
+								<div class="sortBtn">
+									<a href="#" class="lst"><i class="fa fa-th-list"></i></a>
+									<a href="#" class="grd act"><i class="fa fa-th-large"></i></a>
+								</div>
+							</div>
+							<div class="showing">
+								<p>Showing results 1 to 10</p>
+								<img src="images/border.png">
+							</div>
+							<div class="hiredCarWrap limos innerHirdCars">
+								<div class="listView">
+									<div class="row">
+										
+										<div class="col-md-12">
+											<div class="carItem">
+												<div class="row">
+													<div class="col-sm-4 col-md-4">
+														<figure>
+															<div class="bigsImages">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+															</div>
+															<div class="smallImagess">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+																<div class="imgs"><img src="images/drivr/car6.png"></div>
+															</div>
+														</figure>
+													</div>
+													<div class="col-sm-8 col-md-8">
+														<div class="offerdt">
+															<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+															<ul>
+																<li>
+																	<img src="images/icon1.png">
+																	Seats 4
+																</li>
+																<li>
+																	<img src="images/icon2.png">
+																	Doors 2
+																</li>
+																<li>
+																	<img src="images/icon3.png">
+																	Automatic
+																</li>
+															</ul>
+															<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+															<div class="fieldWr">
+																<label>
+																	<input type="checkbox"  class="zero" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+																</label>
+																<label>
+																	<input type="checkbox" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+																</label>
+															</div>
+															<div class="terms">
+																<h6>Terms & Conditions</h6>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+															</div>
+															<a href="single.html" class="book">Book Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="carItem">
+												<div class="row">
+													<div class="col-sm-4 col-md-4">
+														<figure>
+															<div class="bigsImages">
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+															</div>
+															<div class="smallImagess">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+																<div class="imgs"><img src="images/drivr/car6.png"></div>
+															</div>
+														</figure>
+													</div>
+													<div class="col-sm-8 col-md-8">
+														<div class="offerdt">
+															<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+															<ul>
+																<li>
+																	<img src="images/icon1.png">
+																	Seats 4
+																</li>
+																<li>
+																	<img src="images/icon2.png">
+																	Doors 2
+																</li>
+																<li>
+																	<img src="images/icon3.png">
+																	Automatic
+																</li>
+															</ul>
+															<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+															<div class="fieldWr">
+																<label>
+																	<input type="checkbox"  class="zero" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+																</label>
+																<label>
+																	<input type="checkbox" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+																</label>
+															</div>
+															<div class="terms">
+																<h6>Terms & Conditions</h6>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+															</div>
+															<a href="single.html" class="book">Book Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="carItem">
+												<div class="row">
+													<div class="col-sm-4 col-md-4">
+														<figure>
+															<div class="bigsImages">
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+															</div>
+															<div class="smallImagess">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+																<div class="imgs"><img src="images/drivr/car6.png"></div>
+															</div>
+														</figure>
+													</div>
+													<div class="col-sm-8 col-md-8">
+														<div class="offerdt">
+															<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+															<ul>
+																<li>
+																	<img src="images/icon1.png">
+																	Seats 4
+																</li>
+																<li>
+																	<img src="images/icon2.png">
+																	Doors 2
+																</li>
+																<li>
+																	<img src="images/icon3.png">
+																	Automatic
+																</li>
+															</ul>
+															<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+															<div class="fieldWr">
+																<label>
+																	<input type="checkbox"  class="zero" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+																</label>
+																<label>
+																	<input type="checkbox" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+																</label>
+															</div>
+															<div class="terms">
+																<h6>Terms & Conditions</h6>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+															</div>
+															<a href="single.html" class="book">Book Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-12">
+											<div class="carItem">
+												<div class="row">
+													<div class="col-sm-4 col-md-4">
+														<figure>
+															<div class="bigsImages">
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+															</div>
+															<div class="smallImagess">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+																<div class="imgs"><img src="images/drivr/car6.png"></div>
+															</div>
+														</figure>
+													</div>
+													<div class="col-sm-8 col-md-8">
+														<div class="offerdt">
+															<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+															<ul>
+																<li>
+																	<img src="images/icon1.png">
+																	Seats 4
+																</li>
+																<li>
+																	<img src="images/icon2.png">
+																	Doors 2
+																</li>
+																<li>
+																	<img src="images/icon3.png">
+																	Automatic
+																</li>
+															</ul>
+															<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+															<div class="fieldWr">
+																<label>
+																	<input type="checkbox"  class="zero" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+																</label>
+																<label>
+																	<input type="checkbox" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+																</label>
+															</div>
+															<div class="terms">
+																<h6>Terms & Conditions</h6>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+															</div>
+															<a href="single.html" class="book">Book Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-md-12">
+											<div class="carItem">
+												<div class="row">
+													<div class="col-sm-4 col-md-4">
+														<figure>
+															<div class="bigsImages">
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+															</div>
+															<div class="smallImagess">
+																<div class="imgs"><img src="images/drivr/car1.png"></div>
+																<div class="imgs"><img src="images/drivr/car2.png"></div>
+																<div class="imgs"><img src="images/drivr/car3.png"></div>
+																<div class="imgs"><img src="images/drivr/car4.png"></div>
+																<div class="imgs"><img src="images/drivr/car5.png"></div>
+																<div class="imgs"><img src="images/drivr/car6.png"></div>
+															</div>
+														</figure>
+													</div>
+													<div class="col-sm-8 col-md-8">
+														<div class="offerdt">
+															<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+															<ul>
+																<li>
+																	<img src="images/icon1.png">
+																	Seats 4
+																</li>
+																<li>
+																	<img src="images/icon2.png">
+																	Doors 2
+																</li>
+																<li>
+																	<img src="images/icon3.png">
+																	Automatic
+																</li>
+															</ul>
+															<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+															<div class="fieldWr">
+																<label>
+																	<input type="checkbox"  class="zero" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+																</label>
+																<label>
+																	<input type="checkbox" name="">
+																	<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+																</label>
+															</div>
+															<div class="terms">
+																<h6>Terms & Conditions</h6>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+															</div>
+															<a href="single.html" class="book">Book Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="girdView">
+									<!-- Hired Cars -->
+									<div class="row">
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="carItem">
+												<figure>
+													<div class="bigsImages">
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+													</div>
+													<div class="smallImages">
+														<div class="imgs"><img src="images/drivr/car1.png"></div>
+														<div class="imgs"><img src="images/drivr/car2.png"></div>
+														<div class="imgs"><img src="images/drivr/car3.png"></div>
+														<div class="imgs"><img src="images/drivr/car4.png"></div>
+														<div class="imgs"><img src="images/drivr/car5.png"></div>
+														<div class="imgs"><img src="images/drivr/car6.png"></div>
+													</div>
+												</figure>
+												<div class="offerdt">
+													<h5><a href="single.html">Ferrari 488 GTB</a></h5>
+													<ul>
+														<li>
+															<img src="images/icon1.png">
+															Seats 4
+														</li>
+														<li>
+															<img src="images/icon2.png">
+															Doors 2
+														</li>
+														<li>
+															<img src="images/icon3.png">
+															Automatic
+														</li>
+													</ul>
+													<div class="price"><p><span>AED 480/ Hour</span></p><p><span>AED 2,500 / Day</span></p></div>
+													<div class="fieldWr">
+														<label>
+															<input type="checkbox"  class="zero" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Zero Deposit</span>
+														</label>
+														<label>
+															<input type="checkbox" name="">
+															<span><cite><i class="fa fa-check"></i></cite>Paid Deposit</span>
+														</label>
+													</div>
+													<div class="terms">
+														<h6>Terms & Conditions</h6>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+														<label><input type="checkbox"  onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms & Conditions</span></label>
+													</div>
+													<a href="single.html" class="book">Book Now</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Hired Cars -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- MainTemplate -->
+			
+
+
+
+
+
+
+			<!-- Hired Cars -->
+			<div class="LuxuryWrrap abt">
+				<div class="heading">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<h6>welcome to rent myride</h6>
+								<h2>The Top Choice for Chauffeur Service Dubai</h2>
+								<span><img src="images/border.png"></span>
+								<p>MyRide Luxury Car Rental in Dubai provides the certified chauffeur services to its customers. We have Dubai RTA (Dubai's Roads and Transport Authority) recognized Chauffeurs onboard. Our crew of chauffeurs is proficient at hospitality, navigational skills, and time management for an elite traveling exposure. Certified chauffeurs at MyRide embark on the set of values that are comprised of punctuality, integrity, collaboration, and honesty. Besides GPS-empowered cars, our chauffeurs are highly skilled at managing most comfy routes to dispense a bizarre sense of ownership to make you feel truly VIP.</p>
+
+								<p>The Best chauffeurs and the exotic luxury fleet is 24x7 available at MyRide. Be it a Chauffeur drove stretch limousine for tourism or VIP guests pick-up/drop-off at the airport, we provide the most reliable services when it comes to luxury car rental in Dubai. Enjoy transparency in all-inclusive charges with the prepaid facility. All-inclusive charges comprise toll | taxes | fuel, etc. Forget markup or commission as you are directly dealing with MyRide. Don’t let your guests pay during the trip except for any extra usage with our prepaid option. So just sit back relaxed while our chauffeur drives you or your guests across Dubai in the range of luxury cars of your choice.</p>
+
+								<p>Dubai locals/visitors with the legitimate driving license are entitled to hire and drive supercars at MyRide. Don't have a valid driving license? Ruffle the problem with our expert chauffeur to cruise around in class. Be it an hourly | daily or weekly sports car rental in Dubai, choose a car as per your requirements and we get it delivered in 60 minutes at your desired location with or without the driver. Our Hospitality experts have collected the most high-performance supercars from all over the world under one roof to complement your unique taste. MyRide – leading luxury car rental in Dubai offers exotic fleet ranging from stretch limousines, Mercedes Benz, BMW, Audi, Porsche, Cadillac, and more to select from at a click JUST FOR YOU.</p>
+							</div>
+						</div>					
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Hired Cars -->
+
+			<!-- areas -->
+			<div class="heading">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<h6>what customers are saying</h6>
+							<h2>customer reviews</h2>
+							<span><img src="images/border.png"></span>
+						</div>
+					</div>					
+				</div>
+			</div>
+
+			<div class="testimonialWrap">
+				<div class="container">
+					<div class="testislider">
+						<div class="destiwrap">
+							<div class="desti">
+								<figure>
+									<img src="images/quote.png">
+									<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+								</figure>
+								<div class="bottomD">
+									<img src="images/user.png">
+									<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+								</div>
+							</div>
+						</div>
+						<div class="destiwrap">
+							<div class="desti">
+								<figure>
+									<img src="images/quote.png">
+									<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+								</figure>
+								<div class="bottomD">
+									<img src="images/user.png">
+									<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+								</div>
+							</div>
+						</div>
+						<div class="destiwrap">
+							<div class="desti">
+								<figure>
+									<img src="images/quote.png">
+									<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+								</figure>
+								<div class="bottomD">
+									<img src="images/user.png">
+									<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+								</div>
+							</div>
+						</div>
+						<div class="destiwrap">
+							<div class="desti">
+								<figure>
+									<img src="images/quote.png">
+									<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+								</figure>
+								<div class="bottomD">
+									<img src="images/user.png">
+									<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+								</div>
+							</div>
+						</div>
+						<div class="destiwrap">
+							<div class="desti">
+								<figure>
+									<img src="images/quote.png">
+									<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+								</figure>
+								<div class="bottomD">
+									<img src="images/user.png">
+									<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- areas -->
+
+
+
+		<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="widget">
+							<img src="images/logo.png" />
+							<p>
+								Myride Middle East DMCC is one stop for Luxury Car Rental Dubai
+								& Limousine hiring in Dubai, where an individual can Select,
+								Register and Pay online and get the car delivered within 60
+								Minutes anywhere in Dubai.
+							</p>
+							<div class="pym">
+								<img src="images/payment/img1.png" />
+								<img src="images/payment/img2.png" />
+								<img src="images/payment/img3.png" />
+								<img src="images/payment/img4.png" />
+								<img src="images/payment/img5.png" />
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2 col-md-2">
+						<div class="widget">
+							<h4>Contact <img src="images/border.png" /></h4>
+							<ul>
+								<li><i class="fa fa-phone"></i>+971 4566 7048</li>
+								<li><i class="fa fa-phone"></i>+971 5555 05281</li>
+								<li><i class="fa fa-phone"></i>+971 5555 05281</li>
+								<li><i class="fa fa-envelope"></i>info@myride.ae</li>
+								<li><i class="fa fa-envelope"></i>support@myride.ae</li>
+								<li>
+									<i class="fa fa-map-marker"></i>Jumeirah Lake Towers, Dubai.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2 col-md-2">
+						<div class="widget">
+							<h4>Quick Links <img src="images/border.png" /></h4>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Stretch Limo</a></li>
+								<li><a href="#">Car Rental</a></li>
+								<li><a href="#">Blogs</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div class="widget">
+							<h4>Map <img src="images/border.png"></h4>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14455.805017031698!2d55.13568148917137!3d25.069641253739636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f1d1d5afb1fc4aa!2sMyRide.ae%20Middle%20East!5e0!3m2!1sen!2s!4v1594899618875!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12">
+						<div class="social">
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-google-plus"></i></a>
+							<a href="#"><i class="fab fa-pinterest"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12">
+						<div class="copy">
+							<p>
+								Copyrights (c) 2021 Rent Myride. All rights reserved.
+								<a href="#">Privacy Policy</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer -->
+
+		<!--	Js Link
+		============================================================--> 
+
+		<script src="js/jquery.min.js"></script> 
+		<script src="js/bootstrap.min.js"></script> 
+		<script src="js/typed.js" type="text/javascript"></script>
+  		<script src="js/jquery-ui.js"></script>
+  		<script src="js/jquery.datetimepicker.full.min.js"></script>
+		<script src="js/infiniteslidev2.js"></script>
+		<script src="js/slick.js"></script>
+    	<script src="js/jquery.range.js"></script>
+		<script src="js/scripts.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,27 @@
+.videoplayer {
+  position: relative;
+}
+
+.video_icon {
+  height: 50px !important;
+  width: 50px !important;
+  position: absolute;
+  z-index: 8999;
+  top: 38%;
+  left: 44%;
+}
+
+.opacityVideoIcon {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .video_icon {
+    height: 50px !important;
+    width: 50px !important;
+    position: absolute;
+    z-index: 8999;
+    top: 31%;
+    left: 44%;
+  }
+}

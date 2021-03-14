@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Meta Tags -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="RentMYRIDE">
+		<meta name="keywords" content="">
+		<meta name="author" content="Unicoder">
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.png">
+		<!--	Fonts
+			========================================================-->
+		<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<!--	Css Link
+			========================================================-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css">
+		<link rel="stylesheet" href="css/jquery.range.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--	Title
+			=========================================================-->
+		<title>RentMYRIDE</title>
+	</head>
+	<body>
+		<!-- Top Bar -->
+		<div class="topBar">
+			<ul>
+				<li><a href="#"><i class="fa fa-phone"></i> +971 5555 05281 </a></li>
+				<li><a href="#"><i class="fa fa-envelope"></i> info@myride.ae</a></li>
+				<li>
+					<i class="fa fa-coins"></i>
+					<select>
+						<option>AED</option>
+					</select>
+				</li>
+				<li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
+			</ul>
+			<a href="#" class="plus"><i class="fa fa-plus"></i></a>
+		</div>
+		<!-- Top Bar -->
+		<!-- Header -->
+		<div class="header">
+			<div class="row">
+				<div class="col-sm-3 col-md-3 logo">
+					<a href="index.html"><img src="images/logo.png"></a>
+					<a href="#" class="openNav"><i class="fa fa-bars"></i></a>
+				</div>
+				<div class="col-sm-9 col-md-9">
+					<nav>
+						<a href="#" class="closeNav"><i class="fa fa-times"></i></a>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="car_rental.html" class="active">Car rental </a></li>
+							<li><a href="car_with_driver.html">Car with driver </a></li>
+							<li><a href="stretch_limo.html">Stretch Limo </a></li>
+							<li><a href="blog.html">Blog </a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- Header -->
+		<!-- Banner -->
+		<div class="innerBanner">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h3>Car Rental</h3>
+						<img src="images/border.png">
+						<ul>
+							<li><a href="#"><i class="fa fa-home"></i> Rent Myride</a></li>
+							<li><i class="fa fa-angle-right"></i></li>
+							<li>Car Rental</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Banner -->
+		<!-- MainTemplate -->
+		<div class="mainContent">
+			<div class="container">
+				<div class="row">
+					<div  class="col-sm-3 col-md-3">
+						<div class="sideBar">
+							<div class="sideWidget">
+								<h3><span><img src="images/caricon.png"><i></i></span>Search Filters</h3>
+								<div class="widgetContent">
+									<form>
+										<!--<div class="searchtype">-->
+										<!--	<label>-->
+										<!--		<input type="radio" name="type">-->
+										<!--		<span><i class="fa fa-check"></i>Hourly</span>-->
+										<!--	</label>-->
+										<!--	<label>-->
+										<!--		<input type="radio" name="type">-->
+										<!--		<span><i class="fa fa-check"></i>Daily</span>-->
+										<!--	</label>-->
+										<!--	<label>-->
+										<!--		<input type="radio" name="type">-->
+										<!--		<span><i class="fa fa-check"></i>Delivery</span>-->
+										<!--	</label>-->
+										<!--</div>-->
+										<h5><span>-</span>From Date</h5>
+										<div class="fields">
+											<i class="fa fa-calendar"></i>
+											<input class="datepicker" type="text" name="" placeholder="From Date">
+										</div>
+										<h5><span>-</span>To Date</h5>
+										<div class="fields">
+											<i class="fa fa-calendar"></i>
+											<input type="text" class="datepicker" name="" placeholder="To Date">
+										</div>
+										<h5><span>-</span>Time</h5>
+										<div class="fieldset">
+											<div class="fields">
+												<select id="CRFromTime" name="FromTime" onchange="UpdateCRToTime(this.value)">
+													<option value="">Hour</option>
+												</select>
+											</div>
+											<div class="fields">
+												<select id="CRToTime" name="ToTime" onchange="toggleDeliveryPickupCR()">
+													<option value="">Please Select</option>
+												</select>
+											</div>
+										</div>
+										<button>Apply filters</button>
+									</form>
+								</div>
+							</div>
+							<div class="sideWidget">
+								<h3><span><img src="images/caricon.png"><i></i></span>Brands</h3>
+								<div class="widgetContent">
+									<div class="brands">
+										<figure>
+											<a href="/cars/car-rental/rent-lamborghini-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Lamborghini-Rent-MyRide.png " alt="Lamborghini"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-audi-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Audi-RentMyRide.png " alt="Audi"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/bmw-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/BMW-Rent-MyRide.png " alt="BMW"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-ferrari-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Ferrari-RentMyRide.png " alt="Ferrari"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-a-porsche-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Porsche-RentMyRide.png " alt="Porsche"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/bentley-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Bentley-RentMyRide.png " alt="Bentley"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rolls-royce-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Rolls-Royce-RentMyRide.png " alt="Rolls Royce"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/range-rover-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Range-Rover-RentMyRide.png " alt="Range Rover"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-mercedes-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Mercedes-Benz-RentMyRide.png " alt="Mercedes-Benz"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/lexus-for-rent-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Lexus-RentMyRide.png " alt="Lexus"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-maserati-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Maserati-RentMyRide.png " alt="Maserati"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-mclaren-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/McLaren-RentMyRide.png " alt="Mclaren"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-nissan-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Nissan-RentMyRide.png " alt="Nissan"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-chevrolet-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Chevrolet-RentMyRide.png " alt="Chevrolet"></a>
+										</figure>
+										<figure>
+											<a href="/cars/limousine/rent-chrysler-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Chrysler-RentMyRide.png " alt="Chrysler"></a>
+										</figure>
+										<figure>
+											<a href="/cars/limousine/rent-a-dodge-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Dodge-RentMyRide.png " alt="Dodge"></a>
+										</figure>
+										<figure>
+											<a href="/cars/limousine/rent-infiniti-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Infiniti-RentMyRide.png " alt="infiniti"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-cadillac-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Cadillac-RentMyRide.png " alt="Cadillac"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-a-toyota-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Toyota-RentMyRide.png " alt="Toyota"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/rent-a-ford-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Ford-RentMyRide.png " alt="Ford"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/bugatti-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Bugatti-RentMyRide.png " alt="Bugatti"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/mini-cooper-rental-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Mini-RentMyRide.png " alt="Mini"></a>
+										</figure>
+										<figure>
+											<a href="/cars/limousine/rent-a-lincoln-in-dubai"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Lincoln-RentMyRide.png " alt="Lincoln"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/gmc"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/GMC-RentMyRide.png " alt="GMC"></a>
+										</figure>
+										<figure>
+											<a href="/cars/car-rental/polaris"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/Brand/Polaris-RentMyRide.png " alt="Polaris"></a>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div  class="col-sm-9 col-md-9">
+						<div class="sortOption">
+							<div class="form">
+								<form action="/Vehicle" method="post">
+									<input type="hidden" name="catid" value="2">
+									<select name="sort" onchange="this.form.submit()">
+										<option value="null">Select Pricing</option>
+										<option value="Low">Low to High</option>
+										<option value="High">High to Low</option>
+									</select>
+									<select id="selectShow" name="range" onchange="this.form.submit();">
+										<option value="null">Select</option>
+										<option value="C-6">6</option>
+										<option value="C-12">12</option>
+										<option value="C-18">18</option>
+										<option value="C-24">24</option>
+										<option value="C-36">36</option>
+										<option value="C-48">48</option>
+										<option value="C-All">Show All</option>
+									</select>
+								</form>
+							</div>
+							<div class="sortBtn">
+								<a href="#" class="lst"><i class="fa fa-th-list"></i></a>
+								<a href="#" class="grd act"><i class="fa fa-th-large"></i></a>
+							</div>
+						</div>
+						<!--<div class="showing">-->
+						<!--	<p>Showing results 1 to 10</p>-->
+						<!--	<img src="images/border.png">-->
+						<!--</div>-->
+						<div class="hiredCarWrap innerHirdCars">
+							<div class="listView">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb1" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a6d925fe80bd4a86a08667c1072e2863Rent-Audi-A3-in-Dubai.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/115b6b2b70c94c4c9a4a8f900809a065Rent-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/71ec59d98c7c4680a77b3a88408559c5Audi-A3-Rental-in-Dubai.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/f8c1deccb148436b861ca37fb78014ceAudi-A3-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8c2ce18ac62a4077ad6385119c467a3cAudi-A3-for-Rent-in-Dubai.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0069920ce6cc43ff85fc969678adaf06Audi-A3-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/47226d45330a4ab38bc71abc0c9fcbe3Hire-Audi-A3-in-Dubai.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/63ecf636ad75424786cc224792e39bc0Hire-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/011b614a66cb4912824dbe15e89b432dRent-A-Audi-A3-in-Dubai.jpg" alt="Audi A3 ">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb1" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a6d925fe80bd4a86a08667c1072e2863Rent-Audi-A3-in-Dubai.jpg" alt="Audi A3 ">
+																</li>
+																<li data-target="#carousel-thumb1" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/115b6b2b70c94c4c9a4a8f900809a065Rent-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</li>
+																<li data-target="#carousel-thumb1" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/71ec59d98c7c4680a77b3a88408559c5Audi-A3-Rental-in-Dubai.jpg" alt="Audi A3 ">
+																</li>
+																<li data-target="#carousel-thumb1" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/f8c1deccb148436b861ca37fb78014ceAudi-A3-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A3 ">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai">Audi A3 </a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 350<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb2" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/accbe2f6819d4988920f383850c0c351Audi A8 6.7_.jpg" alt="Audi A8  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e8ee6780f7d4253bc6547a02a9a91d4Audi A8 9.5.6.jpg" alt="Audi A8  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7bc0b9eaca584fbc91f3c0cba68ff071Audi A8_white.jpg" alt="Audi A8  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9d46f884a1254332934a9b0f057520cdAudi A8 5.6.jpg" alt="Audi A8  or Similar">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb2" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/accbe2f6819d4988920f383850c0c351Audi A8 6.7_.jpg" alt="Audi A8  or Similar">
+																</li>
+																<li data-target="#carousel-thumb2" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e8ee6780f7d4253bc6547a02a9a91d4Audi A8 9.5.6.jpg" alt="Audi A8  or Similar">
+																</li>
+																<li data-target="#carousel-thumb2" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7bc0b9eaca584fbc91f3c0cba68ff071Audi A8_white.jpg" alt="Audi A8  or Similar">
+																</li>
+																<li data-target="#carousel-thumb2" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9d46f884a1254332934a9b0f057520cdAudi A8 5.6.jpg" alt="Audi A8  or Similar">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai">Audi A8  or Similar</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,000<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb3" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72ee3ab39edf4b85aea6b058ff8d852bRent-Audi-A6-in-Dubai.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/83489422aa594bd3898e544d91b88aacAudi-A6-for-Rent-in-Dubai.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6b6e19e716324b8cbdd7a9e1fd858f5eAudi-A6-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/48f1a667785241f3bb3b3faadb71a712Audi-A6-Rental-in-Dubai.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2fdf93440ae74b9d9c289f27c16e7dd9Audi-A6-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/09a308ea3fa6430ea3fcf82a93440fc7Hire-Audi-A6-in-Dubai.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7f25708e6cd94a3dadb9622574cbfb17Hire-Audi-A6-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/23c59f7568ce46759ccd6f062604fc87Rent-A-Audi-A6-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ce01351959ef4144bf87ad98ba42c5b7Audi-A6-Car-Hire-in-Dubai.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2c8dc65bd86549a3a3d40ced7617cb1dAudi-A6-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/084c161159e04682989bb4f21dc41e37Rent-A-Audi-A6-in-Dubai.jpg" alt="Audi A6">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb3" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72ee3ab39edf4b85aea6b058ff8d852bRent-Audi-A6-in-Dubai.jpg" alt="Audi A6">
+																</li>
+																<li data-target="#carousel-thumb3" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/83489422aa594bd3898e544d91b88aacAudi-A6-for-Rent-in-Dubai.jpg" alt="Audi A6">
+																</li>
+																<li data-target="#carousel-thumb3" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6b6e19e716324b8cbdd7a9e1fd858f5eAudi-A6-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A6">
+																</li>
+																<li data-target="#carousel-thumb3" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/48f1a667785241f3bb3b3faadb71a712Audi-A6-Rental-in-Dubai.jpg" alt="Audi A6">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai">Audi A6</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 725<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb4" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/1438572e46094cafa84b7781a5e2783dRent-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7da5bb4ef7154446ae6f93ae407a41a0Rent-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e8ee09fe48154becafdf51956404e3d8Audi-A5-Convertible-Rental-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8cf23c2c42fb4f0a8044f19d75377e75Audi-A5-Convertible-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5ffa8860e2924814b72799abdeb31ae4Audi-A5-Convertible-for-Rent-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/05db0d3f8b2d466bb17ba79bb39bdbe5Audi-A5-Convertible-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/493c75c7df63489c8bc06c8310b5f967Hire-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/bc12831292324701b4160a2a45aa492eHire-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3c1db301c88744b4b9f824389feb0dd8Rent-A-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/90929115d8d34881bbc461f2a91c6853Rent-A-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb4" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/1438572e46094cafa84b7781a5e2783dRent-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</li>
+																<li data-target="#carousel-thumb4" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7da5bb4ef7154446ae6f93ae407a41a0Rent-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</li>
+																<li data-target="#carousel-thumb4" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e8ee09fe48154becafdf51956404e3d8Audi-A5-Convertible-Rental-in-Dubai.jpg" alt="Audi A5 Convertible">
+																</li>
+																<li data-target="#carousel-thumb4" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8cf23c2c42fb4f0a8044f19d75377e75Audi-A5-Convertible-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai">Audi A5 Convertible</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 4
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 2
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 750<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb5" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2046c1fef7434f4688dff91b395ee0d5Audi Q7 6.7.8_.jpg" alt="Audi Q7 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/587a8573194c4952a0a158fd52b842b1Audi_Q7.jpg" alt="Audi Q7 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/49b6da04a7524405bbda62f00e71d65aAudi Q7_6.7_.jpg" alt="Audi Q7 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/69c91686d8c5491fac75ed8e3af92a06Audi Q7 56.783_.jpg" alt="Audi Q7 ">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb5" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2046c1fef7434f4688dff91b395ee0d5Audi Q7 6.7.8_.jpg" alt="Audi Q7 ">
+																</li>
+																<li data-target="#carousel-thumb5" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/587a8573194c4952a0a158fd52b842b1Audi_Q7.jpg" alt="Audi Q7 ">
+																</li>
+																<li data-target="#carousel-thumb5" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/49b6da04a7524405bbda62f00e71d65aAudi Q7_6.7_.jpg" alt="Audi Q7 ">
+																</li>
+																<li data-target="#carousel-thumb5" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/69c91686d8c5491fac75ed8e3af92a06Audi Q7 56.783_.jpg" alt="Audi Q7 ">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai">Audi Q7 </a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 7
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 5
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,000<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb6" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/d5702b5180cf42aaab12a6bb20319cabRent-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/77a08ea582004e71ae3a6d278a5112f0Rent-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/73ee83ec0d3d4c9aa7eca59f774913f6Mercedes-Benz-E-300-Rental-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/22b9c8c8fb1f43deb7162dce5b24fd03Mercedes-Benz-E-300-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ec227df3b1bd45fbb8e0a93972822095Mercedes-Benz-E-300-Rent-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/16e1dcc39f3e4c12824b2e4645f99336Mercedes-Benz-E-300-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/bc805eb2c7b8412598b4060eeb19552cHire-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/562de42440a84c3fbc99025560fd982aRent-A-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a83fd42b342a48129d1a3b5caa151d6aHire-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dbb22f1de62e4183aafe5d17902e8033Rent-A-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dc878ea5ff244263ad6894cc246c8cc0Mercedes-Benz-E-300-Car-Hire-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/30e17526de3b4c71b3dc632119ff5bb8Mercedes-Benz-E-300-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb6" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/d5702b5180cf42aaab12a6bb20319cabRent-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</li>
+																<li data-target="#carousel-thumb6" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/77a08ea582004e71ae3a6d278a5112f0Rent-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</li>
+																<li data-target="#carousel-thumb6" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/73ee83ec0d3d4c9aa7eca59f774913f6Mercedes-Benz-E-300-Rental-in-Dubai.jpg" alt="Mercedes-Benz E300">
+																</li>
+																<li data-target="#carousel-thumb6" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/22b9c8c8fb1f43deb7162dce5b24fd03Mercedes-Benz-E-300-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai">Mercedes-Benz E300</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 750<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 3,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb7" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7728ea43dd044892a685dc5cb46d70b6Rent-Mercedes-Benz-S-500-in-Dubai.jpg" alt="Mercedes Benz S500 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cce2c1281f81476aabb1f424a10b20e7Rent-Mercedes-Benz-S-500-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2272cdfbfd8b414b9f81cbeddcbe0579Mercedes-Benz-S-500-for-Rent-in-Dubai.jpg" alt="Mercedes Benz S500 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e805e96af0f4c68a3b02ddaea468925Mercedes-Benz-S-500-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cf4494384fce4645bd1948460ccd7e17Mercedes-Benz-S-500-Rental-in-Dubai.jpg" alt="Mercedes Benz S500 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0d1b9385416640a6880909488f602f45Mercedes-Benz-S-500-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 ">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb7" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7728ea43dd044892a685dc5cb46d70b6Rent-Mercedes-Benz-S-500-in-Dubai.jpg" alt="Mercedes Benz S500 ">
+																</li>
+																<li data-target="#carousel-thumb7" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cce2c1281f81476aabb1f424a10b20e7Rent-Mercedes-Benz-S-500-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 ">
+																</li>
+																<li data-target="#carousel-thumb7" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2272cdfbfd8b414b9f81cbeddcbe0579Mercedes-Benz-S-500-for-Rent-in-Dubai.jpg" alt="Mercedes Benz S500 ">
+																</li>
+																<li data-target="#carousel-thumb7" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e805e96af0f4c68a3b02ddaea468925Mercedes-Benz-S-500-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 ">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai">Mercedes Benz S500 </a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,250<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 3,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb8" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/c12da6fa08e74dfe86669dce175ec491Rent-Mercedes-Benz-S500-Coupe-in-Dubai.jpg" alt="Mercedes-Benz S500 Coupe ">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb8" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/c12da6fa08e74dfe86669dce175ec491Rent-Mercedes-Benz-S500-Coupe-in-Dubai.jpg" alt="Mercedes-Benz S500 Coupe ">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai">Mercedes-Benz S500 Coupe </a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 4
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 2
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,470<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb9" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/725ca0631c994deeb49cfdd3a5e9712dRent-Mercedes-G63-AMG-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3a1fb864b0d44b17acd3bf4bc5f04d0aRent-Mercedes-G63-AMG-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ea90b3bc88ce49dfa66e76b97bab6dbaMercedes-G63-AMG-Rental-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/844b242c249640fdaae90c6104c3c9d1Mercedes-G63-AMG-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/fd20fe3206024a6f85d7922bf538aa45Mercedes-G63-AMG-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/55d60f894aa74028bbbee290164888adMercedes-G63-AMG-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb9" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/725ca0631c994deeb49cfdd3a5e9712dRent-Mercedes-G63-AMG-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG">
+																</li>
+																<li data-target="#carousel-thumb9" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3a1fb864b0d44b17acd3bf4bc5f04d0aRent-Mercedes-G63-AMG-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG">
+																</li>
+																<li data-target="#carousel-thumb9" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ea90b3bc88ce49dfa66e76b97bab6dbaMercedes-G63-AMG-Rental-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG">
+																</li>
+																<li data-target="#carousel-thumb9" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/844b242c249640fdaae90c6104c3c9d1Mercedes-G63-AMG-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai">Mercedes-Benz G63 AMG</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 5
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,200<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 3,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb10" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cb3acb1043114ee282a42c928ea77f03Mercedes-Benz-G500-4x4-Rental-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e16b9440fa14955beac6a33841a2986Mercedes-Benz-G500-4x4-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/61a31efccd124b9bb08e959bf3de45d8Rent-Mercedes-Benz-G500-4x4-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e5ec65bffbb48549f7754cb03a8236aRent-Mercedes-Benz-G500-4x4-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3b7e9af8ea6e4ce8bc97b3baf84ccc36Mercedes-Benz-G500-4x4-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb10" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cb3acb1043114ee282a42c928ea77f03Mercedes-Benz-G500-4x4-Rental-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</li>
+																<li data-target="#carousel-thumb10" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e16b9440fa14955beac6a33841a2986Mercedes-Benz-G500-4x4-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</li>
+																<li data-target="#carousel-thumb10" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/61a31efccd124b9bb08e959bf3de45d8Rent-Mercedes-Benz-G500-4x4-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</li>
+																<li data-target="#carousel-thumb10" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e5ec65bffbb48549f7754cb03a8236aRent-Mercedes-Benz-G500-4x4-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 ">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai">Mercedes-Benz G500 4x4 </a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 5
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 4,750<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 3,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb11" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/598e46cc2651401699d6492605a89acfMercedes GLE 4555.4.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ab5f01cb223940e38739ed03ca8e76d7Mercedes GLE 334.5.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9e257c67a19d43c9bbac794996f26f99Mercedes GLE 23453.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb11" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/598e46cc2651401699d6492605a89acfMercedes GLE 4555.4.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</li>
+																<li data-target="#carousel-thumb11" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ab5f01cb223940e38739ed03ca8e76d7Mercedes GLE 334.5.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</li>
+																<li data-target="#carousel-thumb11" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9e257c67a19d43c9bbac794996f26f99Mercedes GLE 23453.jpg" alt="Mercedes-Benz GLE AMG  or Similar">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai">Mercedes-Benz GLE AMG  or Similar</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 5
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 4
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,190<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 3,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="carItem">
+											<div class="row">
+												<div class="col-sm-4 col-md-4">
+													<figure>
+														<div id="carousel-thumb12" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+															<div class="carousel-inner" role="listbox">
+																<div class="carousel-item active">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/54bd701e95064de0bd1b4a969dfd9bb0Rent-Lexus-LX570-in-Dubai.jpg" alt="Lexus LX570  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e6b2b44144ea468ca162ba198920d3a1Rent-Lexus-LX570-in-Dubai-RentMyRide.jpg" alt="Lexus LX570  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9c703ded39ae48969bfac70d5ee76455Lexus-LX570-Rental-in-Dubai.jpg" alt="Lexus LX570  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72d63ab6ae0a41108fae19eaf278a952adb6d956-9271-4ae0-8919-1b9d9a5a8822.jpg" alt="Lexus LX570  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e41ad88f0046415c9052f76fbb9b4c960fdb3098-b0db-4d3b-8b63-53e6cac4ffe3.jpg" alt="Lexus LX570  or Similar">
+																</div>
+																<div class="carousel-item">
+																	<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/09f2dc525ec94777b1c179a5824731f597e6a93b-083f-4958-98f9-bdaa9f5345f5.jpg" alt="Lexus LX570  or Similar">
+																</div>
+															</div>
+															<ol class="carousel-indicators">
+																<li data-target="#carousel-thumb12" data-slide-to="0" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/54bd701e95064de0bd1b4a969dfd9bb0Rent-Lexus-LX570-in-Dubai.jpg" alt="Lexus LX570  or Similar">
+																</li>
+																<li data-target="#carousel-thumb12" data-slide-to="1" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e6b2b44144ea468ca162ba198920d3a1Rent-Lexus-LX570-in-Dubai-RentMyRide.jpg" alt="Lexus LX570  or Similar">
+																</li>
+																<li data-target="#carousel-thumb12" data-slide-to="2" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9c703ded39ae48969bfac70d5ee76455Lexus-LX570-Rental-in-Dubai.jpg" alt="Lexus LX570  or Similar">
+																</li>
+																<li data-target="#carousel-thumb12" data-slide-to="3" class="">
+																	<img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72d63ab6ae0a41108fae19eaf278a952adb6d956-9271-4ae0-8919-1b9d9a5a8822.jpg" alt="Lexus LX570  or Similar">
+																</li>
+															</ol>
+														</div>
+													</figure>
+												</div>
+												<div class="col-sm-8 col-md-8">
+													<div class="offerdt">
+														<h5>
+															<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai">Lexus LX570  or Similar</a>
+														</h5>
+														<ul>
+															<li>
+																<img src="images/icon1.png">
+																Seats 7
+															</li>
+															<li>
+																<img src="images/icon2.png">
+																Doors 5
+															</li>
+															<li>
+																<img src="images/icon3.png">
+																Automatic
+															</li>
+														</ul>
+														<p><span><span class="currency">AED</span> 1,100<span class="day"> / Day</span></span></p>
+														<div class="fieldWr">
+															<label>
+															<input type="checkbox" name="">
+															<span>AED 2,000 Deposit</span>
+															</label>
+														</div>
+														<div class="terms">
+															<h6>Terms &amp; Conditions</h6>
+															<p></p>
+															<p>test</p>
+															<p></p>
+															<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+														</div>
+														<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai" class="btn btn-style-3">Book Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="girdView">
+								<!-- Hired Cars -->
+								<div class="row">
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Audi-A3-in-Dubai1.jpg" alt="Rent-Audi-A3-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 1156px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0069920ce6cc43ff85fc969678adaf06Audi-A3-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/47226d45330a4ab38bc71abc0c9fcbe3Hire-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/63ecf636ad75424786cc224792e39bc0Hire-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/011b614a66cb4912824dbe15e89b432dRent-A-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a6d925fe80bd4a86a08667c1072e2863Rent-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/115b6b2b70c94c4c9a4a8f900809a065Rent-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide12" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/71ec59d98c7c4680a77b3a88408559c5Audi-A3-Rental-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide13" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/f8c1deccb148436b861ca37fb78014ceAudi-A3-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide14" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8c2ce18ac62a4077ad6385119c467a3cAudi-A3-for-Rent-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide15" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0069920ce6cc43ff85fc969678adaf06Audi-A3-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide16" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/47226d45330a4ab38bc71abc0c9fcbe3Hire-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide17" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/63ecf636ad75424786cc224792e39bc0Hire-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide18" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/011b614a66cb4912824dbe15e89b432dRent-A-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a6d925fe80bd4a86a08667c1072e2863Rent-Audi-A3-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/115b6b2b70c94c4c9a4a8f900809a065Rent-Audi-A3-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/71ec59d98c7c4680a77b3a88408559c5Audi-A3-Rental-in-Dubai.jpg" alt="Audi A3 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/f8c1deccb148436b861ca37fb78014ceAudi-A3-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A3 "></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai">Audi A3 </a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 350 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a3-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Audi A8 or Similar1.jpg" alt="Rent-Audi-A8-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 272px; transform: translate3d(0px, 0px, 0px);">
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide20" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/accbe2f6819d4988920f383850c0c351Audi A8 6.7_.jpg" alt="Audi A8  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide21" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e8ee6780f7d4253bc6547a02a9a91d4Audi A8 9.5.6.jpg" alt="Audi A8  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide22" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7bc0b9eaca584fbc91f3c0cba68ff071Audi A8_white.jpg" alt="Audi A8  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide23" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9d46f884a1254332934a9b0f057520cdAudi A8 5.6.jpg" alt="Audi A8  or Similar"></div>
+														</div>
+													</div>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai">Audi A8  or Similar</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,000 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a8-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Audi-A6-in-Dubai1.jpg" alt="Rent-Audi-A6-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 1292px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/23c59f7568ce46759ccd6f062604fc87Rent-A-Audi-A6-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ce01351959ef4144bf87ad98ba42c5b7Audi-A6-Car-Hire-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2c8dc65bd86549a3a3d40ced7617cb1dAudi-A6-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/084c161159e04682989bb4f21dc41e37Rent-A-Audi-A6-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide30" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72ee3ab39edf4b85aea6b058ff8d852bRent-Audi-A6-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide31" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/83489422aa594bd3898e544d91b88aacAudi-A6-for-Rent-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide32" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6b6e19e716324b8cbdd7a9e1fd858f5eAudi-A6-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide33" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/48f1a667785241f3bb3b3faadb71a712Audi-A6-Rental-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide34" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2fdf93440ae74b9d9c289f27c16e7dd9Audi-A6-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide35" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/09a308ea3fa6430ea3fcf82a93440fc7Hire-Audi-A6-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide36" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7f25708e6cd94a3dadb9622574cbfb17Hire-Audi-A6-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide37" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/23c59f7568ce46759ccd6f062604fc87Rent-A-Audi-A6-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide38" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ce01351959ef4144bf87ad98ba42c5b7Audi-A6-Car-Hire-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide39" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2c8dc65bd86549a3a3d40ced7617cb1dAudi-A6-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide310" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/084c161159e04682989bb4f21dc41e37Rent-A-Audi-A6-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72ee3ab39edf4b85aea6b058ff8d852bRent-Audi-A6-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/83489422aa594bd3898e544d91b88aacAudi-A6-for-Rent-in-Dubai.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6b6e19e716324b8cbdd7a9e1fd858f5eAudi-A6-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A6"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/48f1a667785241f3bb3b3faadb71a712Audi-A6-Rental-in-Dubai.jpg" alt="Audi A6"></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai">Audi A6</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 725 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a6-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Audi-A5-Convertible-in-Dubai1.jpg" alt="Rent-Audi-A5-Convertible-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 1224px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/493c75c7df63489c8bc06c8310b5f967Hire-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/bc12831292324701b4160a2a45aa492eHire-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3c1db301c88744b4b9f824389feb0dd8Rent-A-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/90929115d8d34881bbc461f2a91c6853Rent-A-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide40" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/1438572e46094cafa84b7781a5e2783dRent-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide41" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7da5bb4ef7154446ae6f93ae407a41a0Rent-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide42" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e8ee09fe48154becafdf51956404e3d8Audi-A5-Convertible-Rental-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide43" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8cf23c2c42fb4f0a8044f19d75377e75Audi-A5-Convertible-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide44" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5ffa8860e2924814b72799abdeb31ae4Audi-A5-Convertible-for-Rent-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide45" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/05db0d3f8b2d466bb17ba79bb39bdbe5Audi-A5-Convertible-for-Rent-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide46" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/493c75c7df63489c8bc06c8310b5f967Hire-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide47" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/bc12831292324701b4160a2a45aa492eHire-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide48" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3c1db301c88744b4b9f824389feb0dd8Rent-A-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide49" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/90929115d8d34881bbc461f2a91c6853Rent-A-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/1438572e46094cafa84b7781a5e2783dRent-Audi-A5-Convertible-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7da5bb4ef7154446ae6f93ae407a41a0Rent-Audi-A5-Convertible-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e8ee09fe48154becafdf51956404e3d8Audi-A5-Convertible-Rental-in-Dubai.jpg" alt="Audi A5 Convertible"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/8cf23c2c42fb4f0a8044f19d75377e75Audi-A5-Convertible-Rental-in-Dubai-RentMyRide.jpg" alt="Audi A5 Convertible"></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai">Audi A5 Convertible</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 4
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 2
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 750 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-a5-convertible-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Audi-Q7-in-Dubai1.jpg" alt="Rent-Audi-Q7-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 272px; transform: translate3d(0px, 0px, 0px);">
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide50" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2046c1fef7434f4688dff91b395ee0d5Audi Q7 6.7.8_.jpg" alt="Audi Q7 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide51" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/587a8573194c4952a0a158fd52b842b1Audi_Q7.jpg" alt="Audi Q7 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide52" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/49b6da04a7524405bbda62f00e71d65aAudi Q7_6.7_.jpg" alt="Audi Q7 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide53" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/69c91686d8c5491fac75ed8e3af92a06Audi Q7 56.783_.jpg" alt="Audi Q7 "></div>
+														</div>
+													</div>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai">Audi Q7 </a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 7
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 5
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,000 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-audi-dubai/rent-audi-q7-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Mercedes-Benz-E300-in-Dubai1.jpg" alt="Rent-Mercedes-Benz-E300-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 1360px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a83fd42b342a48129d1a3b5caa151d6aHire-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dbb22f1de62e4183aafe5d17902e8033Rent-A-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dc878ea5ff244263ad6894cc246c8cc0Mercedes-Benz-E-300-Car-Hire-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/30e17526de3b4c71b3dc632119ff5bb8Mercedes-Benz-E-300-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide60" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/d5702b5180cf42aaab12a6bb20319cabRent-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide61" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/77a08ea582004e71ae3a6d278a5112f0Rent-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide62" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/73ee83ec0d3d4c9aa7eca59f774913f6Mercedes-Benz-E-300-Rental-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide63" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/22b9c8c8fb1f43deb7162dce5b24fd03Mercedes-Benz-E-300-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide64" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ec227df3b1bd45fbb8e0a93972822095Mercedes-Benz-E-300-Rent-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide65" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/16e1dcc39f3e4c12824b2e4645f99336Mercedes-Benz-E-300-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide66" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/bc805eb2c7b8412598b4060eeb19552cHire-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide67" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/562de42440a84c3fbc99025560fd982aRent-A-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide68" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/a83fd42b342a48129d1a3b5caa151d6aHire-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide69" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dbb22f1de62e4183aafe5d17902e8033Rent-A-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide610" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/dc878ea5ff244263ad6894cc246c8cc0Mercedes-Benz-E-300-Car-Hire-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide611" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/30e17526de3b4c71b3dc632119ff5bb8Mercedes-Benz-E-300-Car-Hire-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/d5702b5180cf42aaab12a6bb20319cabRent-Mercedes-Benz-E-300-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/77a08ea582004e71ae3a6d278a5112f0Rent-Mercedes-Benz-E-300-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/73ee83ec0d3d4c9aa7eca59f774913f6Mercedes-Benz-E-300-Rental-in-Dubai.jpg" alt="Mercedes-Benz E300"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/22b9c8c8fb1f43deb7162dce5b24fd03Mercedes-Benz-E-300-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz E300"></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai">Mercedes-Benz E300</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 750 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 3,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-e300-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent-Mercedes-Benz-S500-in-Dubai7.jpg" alt="Rent-Mercedes-Benz-S500-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 952px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2272cdfbfd8b414b9f81cbeddcbe0579Mercedes-Benz-S-500-for-Rent-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e805e96af0f4c68a3b02ddaea468925Mercedes-Benz-S-500-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cf4494384fce4645bd1948460ccd7e17Mercedes-Benz-S-500-Rental-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0d1b9385416640a6880909488f602f45Mercedes-Benz-S-500-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide70" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7728ea43dd044892a685dc5cb46d70b6Rent-Mercedes-Benz-S-500-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide71" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cce2c1281f81476aabb1f424a10b20e7Rent-Mercedes-Benz-S-500-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide72" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2272cdfbfd8b414b9f81cbeddcbe0579Mercedes-Benz-S-500-for-Rent-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide73" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e805e96af0f4c68a3b02ddaea468925Mercedes-Benz-S-500-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide74" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cf4494384fce4645bd1948460ccd7e17Mercedes-Benz-S-500-Rental-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide75" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/0d1b9385416640a6880909488f602f45Mercedes-Benz-S-500-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/7728ea43dd044892a685dc5cb46d70b6Rent-Mercedes-Benz-S-500-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cce2c1281f81476aabb1f424a10b20e7Rent-Mercedes-Benz-S-500-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/2272cdfbfd8b414b9f81cbeddcbe0579Mercedes-Benz-S-500-for-Rent-in-Dubai.jpg" alt="Mercedes Benz S500 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e805e96af0f4c68a3b02ddaea468925Mercedes-Benz-S-500-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes Benz S500 "></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai">Mercedes Benz S500 </a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,250 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 3,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent Mercedes Benz S500 Coupe in Dubai 1.jpg" alt="Rent-Mercedes-Benz-S500-Coupe-in-Dubai "></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 68px; transform: translate3d(0px, 0px, 0px);">
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide80" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/c12da6fa08e74dfe86669dce175ec491Rent-Mercedes-Benz-S500-Coupe-in-Dubai.jpg" alt="Mercedes-Benz S500 Coupe "></div>
+														</div>
+													</div>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai">Mercedes-Benz S500 Coupe </a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 4
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 2
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,470 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-s500-coupe-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Mercedes-Benz G63AMG.jpg" alt="Rent-Mercedes-Benz-G63-AMG-in-Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 952px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ea90b3bc88ce49dfa66e76b97bab6dbaMercedes-G63-AMG-Rental-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/844b242c249640fdaae90c6104c3c9d1Mercedes-G63-AMG-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/fd20fe3206024a6f85d7922bf538aa45Mercedes-G63-AMG-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/55d60f894aa74028bbbee290164888adMercedes-G63-AMG-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide90" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/725ca0631c994deeb49cfdd3a5e9712dRent-Mercedes-G63-AMG-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide91" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3a1fb864b0d44b17acd3bf4bc5f04d0aRent-Mercedes-G63-AMG-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide92" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ea90b3bc88ce49dfa66e76b97bab6dbaMercedes-G63-AMG-Rental-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide93" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/844b242c249640fdaae90c6104c3c9d1Mercedes-G63-AMG-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide94" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/fd20fe3206024a6f85d7922bf538aa45Mercedes-G63-AMG-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide95" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/55d60f894aa74028bbbee290164888adMercedes-G63-AMG-for-Rent-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/725ca0631c994deeb49cfdd3a5e9712dRent-Mercedes-G63-AMG-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3a1fb864b0d44b17acd3bf4bc5f04d0aRent-Mercedes-G63-AMG-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ea90b3bc88ce49dfa66e76b97bab6dbaMercedes-G63-AMG-Rental-in-Dubai.jpg" alt="Mercedes-Benz G63 AMG"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/844b242c249640fdaae90c6104c3c9d1Mercedes-G63-AMG-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G63 AMG"></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai">Mercedes-Benz G63 AMG</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 5
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,200 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 3,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g63-amg-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent Mercedes Benz G500 4x4 in Dubai10.jpg" alt="Rent Mercedes Benz G500 4x4 in Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 884px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e16b9440fa14955beac6a33841a2986Mercedes-Benz-G500-4x4-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/61a31efccd124b9bb08e959bf3de45d8Rent-Mercedes-Benz-G500-4x4-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e5ec65bffbb48549f7754cb03a8236aRent-Mercedes-Benz-G500-4x4-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3b7e9af8ea6e4ce8bc97b3baf84ccc36Mercedes-Benz-G500-4x4-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide100" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cb3acb1043114ee282a42c928ea77f03Mercedes-Benz-G500-4x4-Rental-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide101" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e16b9440fa14955beac6a33841a2986Mercedes-Benz-G500-4x4-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide102" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/61a31efccd124b9bb08e959bf3de45d8Rent-Mercedes-Benz-G500-4x4-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide103" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e5ec65bffbb48549f7754cb03a8236aRent-Mercedes-Benz-G500-4x4-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide104" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/3b7e9af8ea6e4ce8bc97b3baf84ccc36Mercedes-Benz-G500-4x4-for-Rent-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/cb3acb1043114ee282a42c928ea77f03Mercedes-Benz-G500-4x4-Rental-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/5e16b9440fa14955beac6a33841a2986Mercedes-Benz-G500-4x4-Rental-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/61a31efccd124b9bb08e959bf3de45d8Rent-Mercedes-Benz-G500-4x4-in-Dubai.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/6e5ec65bffbb48549f7754cb03a8236aRent-Mercedes-Benz-G500-4x4-in-Dubai-RentMyRide.jpg" alt="Mercedes-Benz G500 4x4 "></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai">Mercedes-Benz G500 4x4 </a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 5
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 4,750 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 3,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-g500-4x4-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent Mercedes Benz GLE AMG in Dubai11.jpg" alt="Rent Mercedes Benz GLE AMG in Dubai"></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 204px; transform: translate3d(0px, 0px, 0px);">
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide110" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/598e46cc2651401699d6492605a89acfMercedes GLE 4555.4.jpg" alt="Mercedes-Benz GLE AMG  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide111" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/ab5f01cb223940e38739ed03ca8e76d7Mercedes GLE 334.5.jpg" alt="Mercedes-Benz GLE AMG  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide112" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9e257c67a19d43c9bbac794996f26f99Mercedes GLE 23453.jpg" alt="Mercedes-Benz GLE AMG  or Similar"></div>
+														</div>
+													</div>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai">Mercedes-Benz GLE AMG  or Similar</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 5
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 4
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,190 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 3,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/rent-mercedes-dubai/rent-mercedes-benz-gle-amg-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="carItem">
+											<figure>
+												<div class="bigsImages">
+													<div class="imgs"><a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai"></a><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicleType/Rent Lexus LX570 in Dubai 12.jpg" alt="Rent Lexus LX570 in Dubai "></div>
+												</div>
+												<div class="smallImages slick-initialized slick-slider">
+													<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+													<div aria-live="polite" class="slick-list draggable">
+														<div class="slick-track" role="listbox" style="opacity: 1; width: 952px; transform: translate3d(-272px, 0px, 0px);">
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9c703ded39ae48969bfac70d5ee76455Lexus-LX570-Rental-in-Dubai.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72d63ab6ae0a41108fae19eaf278a952adb6d956-9271-4ae0-8919-1b9d9a5a8822.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e41ad88f0046415c9052f76fbb9b4c960fdb3098-b0db-4d3b-8b63-53e6cac4ffe3.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/09f2dc525ec94777b1c179a5824731f597e6a93b-083f-4958-98f9-bdaa9f5345f5.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide120" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/54bd701e95064de0bd1b4a969dfd9bb0Rent-Lexus-LX570-in-Dubai.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide121" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e6b2b44144ea468ca162ba198920d3a1Rent-Lexus-LX570-in-Dubai-RentMyRide.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide122" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9c703ded39ae48969bfac70d5ee76455Lexus-LX570-Rental-in-Dubai.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide123" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72d63ab6ae0a41108fae19eaf278a952adb6d956-9271-4ae0-8919-1b9d9a5a8822.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide124" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e41ad88f0046415c9052f76fbb9b4c960fdb3098-b0db-4d3b-8b63-53e6cac4ffe3.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide125" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/09f2dc525ec94777b1c179a5824731f597e6a93b-083f-4958-98f9-bdaa9f5345f5.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/54bd701e95064de0bd1b4a969dfd9bb0Rent-Lexus-LX570-in-Dubai.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/e6b2b44144ea468ca162ba198920d3a1Rent-Lexus-LX570-in-Dubai-RentMyRide.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/9c703ded39ae48969bfac70d5ee76455Lexus-LX570-Rental-in-Dubai.jpg" alt="Lexus LX570  or Similar"></div>
+															<div class="imgs slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 64px;"><img src="https://cdn.rentmyride.ae/Portal/content/myrideImages/vehicle/72d63ab6ae0a41108fae19eaf278a952adb6d956-9271-4ae0-8919-1b9d9a5a8822.jpg" alt="Lexus LX570  or Similar"></div>
+														</div>
+													</div>
+													<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
+												</div>
+											</figure>
+											<div class="offerdt">
+												<h5>
+													<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai">Lexus LX570  or Similar</a>
+												</h5>
+												<ul>
+													<li>
+														<img src="images/icon1.png">
+														Seats 7
+													</li>
+													<li>
+														<img src="images/icon2.png">
+														Doors 5
+													</li>
+													<li>
+														<img src="images/icon3.png">
+														Automatic
+													</li>
+												</ul>
+												<p><span><span class="currency">AED</span> 1,100 <span class="day"> / Day</span></span></p>
+												<div class="fieldWr">
+													<label>
+													<input type="checkbox" name="">
+													<span>AED 2,000 Deposit</span>
+													</label>
+												</div>
+												<div class="terms">
+													<h6>Terms &amp; Conditions</h6>
+													<p></p>
+													<p>test</p>
+													<p></p>
+													<label><input type="checkbox" onchange="valueChangeds()" class="termCheck" name=""><span><cite><i class="fa fa-check"></i></cite>Accept the Terms &amp; Conditions</span></label>
+												</div>
+												<a href="/cars/luxury-car-rental-dubai/lexus-for-rent-in-dubai/rent-lexus-lx570-in-dubai" class="btn btn-style-3">Book Now</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Hired Cars -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MainTemplate -->
+		<!-- Hired Cars -->
+		<div class="LuxuryWrrap abt">
+			<div class="heading">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-12">
+							<h6>welcome to rent myride</h6>
+							<h2>The Top Choice for Chauffeur Service Dubai</h2>
+							<span><img src="images/border.png"></span>
+							<p>Dubai is Paris for the elite lifestyle. High-end supercars that are found cruising around its streets are 1 of a kind. MyRide makes it exclusive yet easy to get sports car rental in Dubai with a comprehensive selection of supercars collected from all over the world under 1 roof. Irrespective of your location, we are always ready for you led by VIP customer service anywhere, anytime. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Hired Cars -->
+		<!-- areas -->
+		<div class="heading">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h6>what customers are saying</h6>
+						<h2>customer reviews</h2>
+						<span><img src="images/border.png"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="testimonialWrap">
+			<div class="container">
+				<div class="testislider">
+					<div class="destiwrap">
+						<div class="desti">
+							<figure>
+								<img src="images/quote.png">
+								<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+							</figure>
+							<div class="bottomD">
+								<img src="images/user.png">
+								<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+							</div>
+						</div>
+					</div>
+					<div class="destiwrap">
+						<div class="desti">
+							<figure>
+								<img src="images/quote.png">
+								<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+							</figure>
+							<div class="bottomD">
+								<img src="images/user.png">
+								<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+							</div>
+						</div>
+					</div>
+					<div class="destiwrap">
+						<div class="desti">
+							<figure>
+								<img src="images/quote.png">
+								<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+							</figure>
+							<div class="bottomD">
+								<img src="images/user.png">
+								<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+							</div>
+						</div>
+					</div>
+					<div class="destiwrap">
+						<div class="desti">
+							<figure>
+								<img src="images/quote.png">
+								<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+							</figure>
+							<div class="bottomD">
+								<img src="images/user.png">
+								<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+							</div>
+						</div>
+					</div>
+					<div class="destiwrap">
+						<div class="desti">
+							<figure>
+								<img src="images/quote.png">
+								<p>My ride recommended the Lamborghini Huracan. It was delivered to my Hotel by two lovely women, who I assumed were models.  All of the documents were straight forward and in English. </p>
+							</figure>
+							<div class="bottomD">
+								<img src="images/user.png">
+								<h3>Robert Chaney <span>Customer <cite><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></cite></span></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- areas -->
+		<!-- footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="widget">
+							<img src="images/logo.png" />
+							<p>
+								Myride Middle East DMCC is one stop for Luxury Car Rental Dubai
+								& Limousine hiring in Dubai, where an individual can Select,
+								Register and Pay online and get the car delivered within 60
+								Minutes anywhere in Dubai.
+							</p>
+							<div class="pym">
+								<img src="images/payment/img1.png" />
+								<img src="images/payment/img2.png" />
+								<img src="images/payment/img3.png" />
+								<img src="images/payment/img4.png" />
+								<img src="images/payment/img5.png" />
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2 col-md-2">
+						<div class="widget">
+							<h4>Contact <img src="images/border.png" /></h4>
+							<ul>
+								<li><i class="fa fa-phone"></i>+971 4566 7048</li>
+								<li><i class="fa fa-phone"></i>+971 5555 05281</li>
+								<li><i class="fa fa-phone"></i>+971 5555 05281</li>
+								<li><i class="fa fa-envelope"></i>info@myride.ae</li>
+								<li><i class="fa fa-envelope"></i>support@myride.ae</li>
+								<li>
+									<i class="fa fa-map-marker"></i>Jumeirah Lake Towers, Dubai.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2 col-md-2">
+						<div class="widget">
+							<h4>Quick Links <img src="images/border.png" /></h4>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Stretch Limo</a></li>
+								<li><a href="#">Car Rental</a></li>
+								<li><a href="#">Blogs</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div class="widget">
+							<h4>Map <img src="images/border.png"></h4>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14455.805017031698!2d55.13568148917137!3d25.069641253739636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f1d1d5afb1fc4aa!2sMyRide.ae%20Middle%20East!5e0!3m2!1sen!2s!4v1594899618875!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12">
+						<div class="social">
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><i class="fab fa-google-plus"></i></a>
+							<a href="#"><i class="fab fa-pinterest"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12">
+						<div class="copy">
+							<p>
+								Copyrights (c) 2021 Rent Myride. All rights reserved.
+								<a href="#">Privacy Policy</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer -->
+		<!--	Js Link
+			============================================================--> 
+		<script src="js/jquery.min.js"></script> 
+		<script src="js/bootstrap.min.js"></script> 
+		<script src="js/typed.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.datetimepicker.full.min.js"></script>
+		<script src="js/infiniteslidev2.js"></script>
+		<script src="js/slick.js"></script>
+		<script src="js/jquery.range.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
